@@ -9,15 +9,14 @@ import glob
 
 images_path = raw_input("Enter the path of the folder containing images : ")
 images =images_path+"/*.jpg"
-#images =images_path+"\\"
-#*.jpg"
 
-assert os.path.exists(images_path), "I did not find the file at, "+str(images_path)
+
+assert os.path.exists(images_path), "this diretory doesn't exist, "+str(images_path)
 f = os.chdir(images_path)
-print("Hooray we found your file!")
-#stuff you do with the file goes here
+print("Hooray we found your directory!")
+
 image_list = []
-for filename in glob.glob(images): #assuming gif
+for filename in glob.glob(images): 
     
     image_list.append(filename)
 
